@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+    <title>Music app</title>
+  </head>
+  <body>
+    <div class="header">
+      <div class="navbar">
+        <p class="logo">Fire</p>
+        <ul>
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">ABOUT</a></li>
+          <li><a href="#">SPECIFICATIONS</a></li>
+          <li><a href="#">PRODUCTS</a></li>
+          <li><a href="#">CONNECT</a></li>
+        </ul>
+      </div>
+      <div class="content">
+        <div class="content1">
+          <h3>Music is food for the <span> soul</span></h3>
+          <h1>Feed Your <span> Soul</span></h1>
+        </div>
+        <div class="content2">
+          <p class="con2">click here to listen</p>
+          <img src="images/play-fill.svg" id="icon1" width="40px" />
+        </div>
+      </div>
+    </div>
+    <audio id="mySong">
+      <source src="audio/Ayra_Starr_-_Rush_Audio_.mp3" type="audio/mp3" />
+    </audio>
+
+    <script>
+      var mySong = document.getElementById("mySong");
+      var icon = document.getElementById("icon1");
+      icon.onclick = function () {
+        if (mySong.paused) {
+          mySong.play();
+          icon.src = "images/pause.svg";
+        } else {
+          mySong.pause();
+          icon.src = "images/play-fill.svg";
+        }
+      };
+    </script>
+  </body>
+</html>
